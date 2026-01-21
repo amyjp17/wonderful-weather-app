@@ -3,45 +3,67 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
     <title>Wonderful Weather App</title>
   </head>
   <body>
-    <header>
-      <form>
-        <input type="search" placeholder="Enter a city..." required />
-        <input type="submit" value="search" />
-      </form>
-    </header>
-    <main>
-      <div>
-        <h1>Perth</h1>
-        <p>
-          Australia <br />
-          Monday 13:12
-        </p>
-        <div>🌞</div>
-        <div>
-          <p>
-            27°C
-            <br />
-            Sunny
-            <br />
-            Humidity: 45%
-            <br />
-            Wind: 10km/h
-          </p>
+    <div class="weather-app">
+      <header>
+        <form class="search-form">
+          <input
+            type="search"
+            placeholder="Enter a city..."
+            required
+            class="search-form-input"
+          />
+          <input type="submit" value="search" class="search-form-button" />
+        </form>
+      </header>
+      <main>
+        <div class="weather-app-data">
+          <span class="weather-city">
+            <h1>Adelaide</h1>
+            <div class="weather-country"
+              ><p>
+                Australia </div>
+                <div class="current-time">Monday 13:12
+              </div></p>
+          </span>
+          <span class="current-weather">
+            <span class="weather-emoji">🌞</span>
+
+            <p>
+              <span class="current-temperature">27</span><span class="weather-unit">°C</span>
+              <br />
+              <span class="weather-details"
+                >Sunny
+                <br />
+                Humidity: 45%
+                <br />
+                Wind: 10km/h
+              </span>
+            </p>
+          </span>
         </div>
-      </div>
-    </main>
-    <footer>
-      This site is coded by
-      <a href="https://github.com/amyjp17" target="_blank">Amy Pannell</a>, is
-      open-sourced on
-      <a href="https://github.com/amyjp17/wonderful-weather-app" target="_blank"
-        >Github</a
-      >
-      and is hosted on
-      <a href="https://wonderfulweather-app.netlify.app/">Netlify</a>.
-    </footer>
+      </main>
+      <footer>
+        This site is coded by
+        <a href="https://github.com/amyjp17" target="_blank">Amy Pannell</a>, is
+        open-sourced on
+        <a
+          href="https://github.com/amyjp17/wonderful-weather-app"
+          target="_blank"
+          >Github</a
+        >
+        and is hosted on
+        <a href="https://wonderfulweather-app.netlify.app/">Netlify</a>.
+      </footer>
+    </div>
   </body>
 </html>
