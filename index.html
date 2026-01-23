@@ -30,24 +30,25 @@
         <div class="weather-app-data">
           <span class="weather-city">
             <h1 id="city"></h1>
-            <div class="weather-country"
+            <div class="weather-country" id="country"
               ><p>
-                Australia </div>
-                <div class="current-time">Monday 13:12
+               </div>
+                <div class="current-time" id="current-time">
               </div></p>
           </span>
           <span class="current-weather">
-            <span class="weather-emoji">🌞</span>
+            <span class="weather-emoji" id="weather-icon"></span>
 
             <p>
               <span class="current-temperature" id="temperature"></span><span class="weather-unit">°C</span>
               <br />
               <span class="weather-details"
-                >Sunny
+                >
+                <span id = "condition"></span>
                 <br />
-                Humidity: 45%
+                humidity: <span id = "humidity"></span>
                 <br />
-                Wind: 10km/h
+                wind: <span id = "wind"></span>
               </span>
             </p>
           </span>
