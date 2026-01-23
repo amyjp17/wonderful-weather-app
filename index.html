@@ -10,6 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
       rel="stylesheet"
     />
+    <script src="https://unpkg.com/axios@1.13.2/dist/axios.min.js"></script>
     <title>Wonderful Weather App</title>
   </head>
   <body>
@@ -28,7 +29,7 @@
       <main>
         <div class="weather-app-data">
           <span class="weather-city">
-            <h1 id="city">Perth</h1>
+            <h1 id="city"></h1>
             <div class="weather-country"
               ><p>
                 Australia </div>
@@ -39,7 +40,7 @@
             <span class="weather-emoji">🌞</span>
 
             <p>
-              <span class="current-temperature">27</span><span class="weather-unit">°C</span>
+              <span class="current-temperature" id="temperature"></span><span class="weather-unit">°C</span>
               <br />
               <span class="weather-details"
                 >Sunny
