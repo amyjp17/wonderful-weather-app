@@ -18,8 +18,6 @@ function refreshWeather(response) {
   conditionElement.innerHTML = response.data.condition.description;
   humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
   windElement.innerHTML = `${Math.round(response.data.wind.speed)}km/h`;
-
-  console.log(response.data);
 }
 
 function formatDate(date) {
@@ -56,7 +54,32 @@ function handleSearchSubmit(event) {
   searchCity(searchInput.value);
 }
 
+function displayForecast() {
+  let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
+  let forecastHtml = "";
+
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `
+      <div class="weather-forecast-day">
+          <div class="forecast-date">${day}</div>
+          <div class="forecast-icon">☀️</div>
+          <div class="forecast-temperatures">
+            <div class="temperature">
+              <strong>25°</strong>
+            </div>
+            / <div class="temperature">13°</div>
+          </div>
+        </div>
+  `;
+  });
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = forecastHtml;
+}
+
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 
 searchCity("Perth");
+displayForecast();
